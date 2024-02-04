@@ -1,0 +1,87 @@
+[
+    {
+      "id": 1,
+      "title": "Classic Leather Tote",
+      "description": "A timeless leather tote bag that combines style and functionality.",
+      "price": 99.99,
+      "image_url": "https://example.com/classic_leather_tote.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Modern Canvas Backpack",
+      "description": "A sleek and durable canvas backpack for your everyday adventures.",
+      "price": 59.99,
+      "image_url": "https://example.com/modern_canvas_backpack.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Traveler's Duffel Bag",
+      "description": "Spacious duffel bag with multiple compartments, perfect for travel enthusiasts.",
+      "price": 79.99,
+      "image_url": "https://example.com/travelers_duffel_bag.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Chic Crossbody Purse",
+      "description": "Stylish crossbody purse for a trendy and convenient everyday carry.",
+      "price": 49.99,
+      "image_url": "https://example.com/chic_crossbody_purse.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Sports Gym Backpack",
+      "description": "A versatile and durable backpack designed for gym-goers and athletes.",
+      "price": 69.99,
+      "image_url": "https://example.com/sports_gym_backpack.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Vintage Leather Messenger Bag",
+      "description": "Classic leather messenger bag with a touch of vintage charm.",
+      "price": 89.99,
+      "image_url": "https://example.com/vintage_leather_messenger_bag.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Fashionable Laptop Bag",
+      "description": "Sleek and fashionable laptop bag with padded compartments for protection.",
+      "price": 74.99,
+      "image_url": "https://example.com/fashionable_laptop_bag.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Outdoor Adventure Backpack",
+      "description": "Durable and spacious backpack for outdoor enthusiasts and hikers.",
+      "price": 89.99,
+      "image_url": "https://example.com/outdoor_adventure_backpack.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Casual Canvas Tote",
+      "description": "Casual and versatile canvas tote bag for everyday use.",
+      "price": 39.99,
+      "image_url": "https://example.com/casual_canvas_tote.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Executive Laptop Briefcase",
+      "description": "Professional and stylish briefcase designed for executives on the go.",
+      "price": 109.99,
+      "image_url": "https://example.com/executive_laptop_briefcase.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Kids' Cartoon Backpack",
+      "description": "Adorable and colorful backpack for kids featuring their favorite cartoons.",
+      "price": 29.99,
+      "image_url": "https://example.com/kids_cartoon_backpack.jpg"
+    },
+    {
+      "id": 12,
+      "title": "Minimalist Leather Clutch",
+      "description": "Elegant and minimalist leather clutch for a night out or special occasions.",
+      "price": 54.99,
+      "image_url": "https://example.com/minimalist_leather_clutch.jpg"
+    }
+  ]
+  
