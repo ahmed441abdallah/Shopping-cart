@@ -1,4 +1,4 @@
-[
+ [
     {
       "id": 1,
       "title": "Classic Leather Tote",
@@ -22,8 +22,8 @@
     },
     {
       "id": 4,
-      "title": "Chic Crossbody Purse",
-      "description": "Stylish crossbody purse for a trendy and convenient everyday carry.",
+      "title": "Chic Crossbows Purse",
+      "description": "Stylish crossbow purse for a trendy and convenient everyday carry.",
       "price": 49.99,
       "image_url": "https://example.com/chic_crossbody_purse.jpg"
     },
