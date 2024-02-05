@@ -1,6 +1,6 @@
 import React from "react";
 import Filter from "./Filter";
-import Products from "./Products";
+import ProductList from "./ProductList";
 
 const Shop = () => {
   return (
@@ -8,7 +8,7 @@ const Shop = () => {
       <h1 className="text-center text-5xl my-8">Browse Products</h1>
       <div>
         <Filter></Filter>
-        <Products></Products>
+        <ProductList></ProductList>
       </div>
     </div>
   );
