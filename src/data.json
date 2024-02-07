@@ -1,87 +1,98 @@
- [
-    {
-      "id": 1,
-      "title": "Classic Leather Tote",
-      "description": "A timeless leather tote bag that combines style and functionality.",
-      "price": 99.99,
-      "image_url": "https://example.com/classic_leather_tote.jpg"
-    },
-    {
-      "id": 2,
-      "title": "Modern Canvas Backpack",
-      "description": "A sleek and durable canvas backpack for your everyday adventures.",
-      "price": 59.99,
-      "image_url": "https://example.com/modern_canvas_backpack.jpg"
-    },
-    {
-      "id": 3,
-      "title": "Traveler's Duffel Bag",
-      "description": "Spacious duffel bag with multiple compartments, perfect for travel enthusiasts.",
-      "price": 79.99,
-      "image_url": "https://example.com/travelers_duffel_bag.jpg"
-    },
-    {
-      "id": 4,
-      "title": "Chic Crossbows Purse",
-      "description": "Stylish crossbow purse for a trendy and convenient everyday carry.",
-      "price": 49.99,
-      "image_url": "https://example.com/chic_crossbody_purse.jpg"
-    },
-    {
-      "id": 5,
-      "title": "Sports Gym Backpack",
-      "description": "A versatile and durable backpack designed for gym-goers and athletes.",
-      "price": 69.99,
-      "image_url": "https://example.com/sports_gym_backpack.jpg"
-    },
-    {
-      "id": 6,
-      "title": "Vintage Leather Messenger Bag",
-      "description": "Classic leather messenger bag with a touch of vintage charm.",
-      "price": 89.99,
-      "image_url": "https://example.com/vintage_leather_messenger_bag.jpg"
-    },
-    {
-      "id": 7,
-      "title": "Fashionable Laptop Bag",
-      "description": "Sleek and fashionable laptop bag with padded compartments for protection.",
-      "price": 74.99,
-      "image_url": "https://example.com/fashionable_laptop_bag.jpg"
-    },
-    {
-      "id": 8,
-      "title": "Outdoor Adventure Backpack",
-      "description": "Durable and spacious backpack for outdoor enthusiasts and hikers.",
-      "price": 89.99,
-      "image_url": "https://example.com/outdoor_adventure_backpack.jpg"
-    },
-    {
-      "id": 9,
-      "title": "Casual Canvas Tote",
-      "description": "Casual and versatile canvas tote bag for everyday use.",
-      "price": 39.99,
-      "image_url": "https://example.com/casual_canvas_tote.jpg"
-    },
-    {
-      "id": 10,
-      "title": "Executive Laptop Briefcase",
-      "description": "Professional and stylish briefcase designed for executives on the go.",
-      "price": 109.99,
-      "image_url": "https://example.com/executive_laptop_briefcase.jpg"
-    },
-    {
-      "id": 11,
-      "title": "Kids' Cartoon Backpack",
-      "description": "Adorable and colorful backpack for kids featuring their favorite cartoons.",
-      "price": 29.99,
-      "image_url": "https://example.com/kids_cartoon_backpack.jpg"
-    },
-    {
-      "id": 12,
-      "title": "Minimalist Leather Clutch",
-      "description": "Elegant and minimalist leather clutch for a night out or special occasions.",
-      "price": 54.99,
-      "image_url": "https://example.com/minimalist_leather_clutch.jpg"
-    }
-  ]
-  
+[
+  {
+    "id": 1,
+    "title": "Classic Leather Tote",
+    "description": "A timeless leather tote bag that combines style and functionality.",
+    "price": 99.99,
+    "image_url":"https://img.freepik.com/free-photo/hand-bag-layout-with-place-text-women-s-accessories-jewellery-background-mockup-banner-fashion-accessories_460848-13210.jpg?size=626&ext=jpg",
+    "size": ["SMALL",  "LARGE"]
+  },
+  {
+    "id": 2,
+    "title": "Modern Canvas Backpack",
+    "description": "A sleek and durable canvas backpack for your everyday adventures.",
+    "price": 59.99,
+    "image_url":"https://img.freepik.com/free-photo/fashion-hand-new-women-luxury_1203-6508.jpg?size=626&ext=jpg",
+    "size": ["SMALL", "MEDIUM", "LARGE"]
+  },
+  {
+    "id": 3,
+    "title": "Traveler's Duffel Bag",
+    "description": "Spacious duffel bag with multiple compartments, perfect for travel enthusiasts.",
+    "price": 79.99,
+    "image_url":"https://img.freepik.com/free-photo/beautiful-elegance-luxury-fashion-green-handbag_1203-7655.jpg?size=626&ext=jpg",
+    "size": ["SMALL", "MEDIUM"]
+  },
+  {
+    "id": 4,
+    "title": "Chic Crossbows Purse",
+    "description": "Stylish crossbow purse for a trendy and convenient everyday carry.",
+    "price": 49.99,
+    "image_url":"https://img.freepik.com/free-photo/handbag_1203-8313.jpg?size=626&ext=jpg",
+    "size": ["LARGE"]
+  },
+  {
+    "id": 5,
+    "title": "Sports Gym Backpack",
+    "description": "A versatile and durable backpack designed for gym-goers and athletes.",
+    "price": 69.99,
+    "image_url":"https://img.freepik.com/free-photo/color-purple-elegance-woman-luxury_1203-6518.jpg?size=626&ext=jpg",
+    "size": ["SMALL"]
+  },
+  {
+    "id": 6,
+    "title": "Vintage Leather Messenger Bag",
+    "description": "Classic leather messenger bag with a touch of vintage charm.",
+    "price": 89.99,
+    "image_url":"https://img.freepik.com/premium-photo/blue-fabric-suitcase-isolated_112112-646.jpg?size=626&ext=jpg",
+    "size": ["MEDIUM"]
+  },
+  {
+    "id": 7,
+    "title": "Fashionable Laptop Bag",
+    "description": "Sleek and fashionable laptop bag with padded compartments for protection.",
+    "price": 74.99,
+    "image_url":"https://img.freepik.com/premium-photo/large-suitcase_692498-1893.jpg?size=626&ext=jpg",
+    "size": ["SMALL", "MEDIUM", "LARGE"]
+  },
+  {
+    "id": 8,
+    "title": "Outdoor Adventure Backpack",
+    "description": "Durable and spacious backpack for outdoor enthusiasts and hikers.",
+    "price": 89.99,
+    "image_url":"https://img.freepik.com/free-psd/view-hawaiian-shirt-with-luggage_23-2150819301.jpg?size=626&ext=jpg",
+    "size": [ "LARGE"]
+  },
+  {
+    "id": 9,
+    "title": "Casual Canvas Tote",
+    "description": "Casual and versatile canvas tote bag for everyday use.",
+    "price": 39.99,
+    "image_url":"https://img.freepik.com/free-photo/handbag_1203-8313.jpg?size=626&ext=jpg",
+    "size": ["SMALL"]
+  },
+  {
+    "id": 10,
+    "title": "Executive Laptop Briefcase",
+    "description": "Professional and stylish briefcase designed for executives on the go.",
+    "price": 109.99,
+    "image_url":"https://img.freepik.com/free-photo/new-color-purse-luxury-handbag_1203-6519.jpg?size=626&ext=jpg",
+    "size": ["MEDIUM" ]
+  },
+  {
+    "id": 11,
+    "title": "Kids' Cartoon Backpack",
+    "description": "Adorable and colorful backpack for kids featuring their favorite cartoons.",
+    "price": 29.99,
+    "image_url":"https://img.freepik.com/free-photo/luxury-woman-handbag_1203-8393.jpg?size=626&ext=jpg",
+    "size": ["SMALL"]
+  },
+  {
+    "id": 12,
+    "title": "Minimalist Leather Clutch",
+    "description": "Elegant and minimalist leather clutch for a night out or special occasions.",
+    "price": 54.99,
+    "image_url":"https://img.freepik.com/premium-photo/fashionable-women-s-handbag-white-background-studio-shooting_508835-6688.jpg?size=626&ext=jpg",
+    "size": [ "LARGE"]
+  }
+]
