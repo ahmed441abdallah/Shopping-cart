@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Modal from "react-modal";
-import { RiCloseCircleFill } from "react-icons/ri";
+
 import { RiShoppingBasketLine } from "react-icons/ri";
+import ProductModal from "./ProductModal";
 
 const Product = ({ product }) => {
   const [productDetails, setProductDetails] = useState("");
@@ -19,11 +19,11 @@ const Product = ({ product }) => {
         data-te-ripple-color="light"
       >
         <img
-          className="rounded-t-lg"
-          src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg"
+          className="rounded-t-lg mx-auto sm:mx-0 w-full h-96 object-contain"
+          src={product.image_url}
           alt="product"
         />
-        <a onClick={() => openModal(product)}>
+        <a href="#" onClick={() => openModal(product)}>
           <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
         </a>
       </div>
@@ -43,26 +43,10 @@ const Product = ({ product }) => {
         </button>
       </div>
       {
-        <Modal isOpen={productDetails}>
-          <div className="flex">
-            <div className=" w-1/2 m-auto text-center">
-              <img
-                src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg"
-                alt="products"
-                className=" rounded-xl"
-              ></img>
-              <h1 className=" text-2xl font-bold mt-4">
-                {productDetails.title}
-              </h1>
-              <p> {productDetails.description}</p>
-              <h3 className=" text-red-600"> {productDetails.price} $</h3>
-            </div>
-            <RiCloseCircleFill
-              className=" text-2xl cursor-pointer"
-              onClick={closeModal}
-            ></RiCloseCircleFill>
-          </div>
-        </Modal>
+        <ProductModal
+          productDetails={productDetails}
+          closeModal={closeModal}
+        ></ProductModal>
       }
     </div>
   );
