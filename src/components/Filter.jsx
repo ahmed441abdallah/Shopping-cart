@@ -1,10 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaArrowCircleDown } from "react-icons/fa";
 
-const CenteredDropdown = () => {
+const Filtration = ({
+  handleSizeChange,
+  size,
+  products,
+  handleOrderChange,
+  order,
+}) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
-
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
@@ -39,13 +44,17 @@ const CenteredDropdown = () => {
         >
           <div className="py-2 px-2 flex flex-col items-center ">
             <h1 className=" my-4 text-1xl bg-slate-300 p-2 rounded-md">
-              Number of Products 4
+              Number of Products {products.length}
             </h1>
             <div className="fil-size flex flex-col">
               <span className="text-1xl mb-2 bg-slate-300 p-2 rounded-md">
                 Filter By size :
               </span>
-              <select className="px-4 py-2">
+              <select
+                className="px-4 py-2"
+                value={size}
+                onChange={handleSizeChange}
+              >
                 <option value="ALL">ALL</option>
                 <option value="SMALL">SMALL</option>
                 <option value="MEDIUM">MEDIUM</option>
@@ -56,7 +65,11 @@ const CenteredDropdown = () => {
               <span className="my-2 text-1xl mb-2 bg-slate-300 p-2 rounded-md">
                 Filter By Order :
               </span>
-              <select className=" px-4 py-2">
+              <select
+                className=" px-4 py-2"
+                onChange={handleOrderChange}
+                value={order}
+              >
                 <option value="Latest">Latest</option>
                 <option value="Highest">Highest</option>
                 <option value="Lowest">Lowest</option>
@@ -69,4 +82,4 @@ const CenteredDropdown = () => {
   );
 };
 
-export default CenteredDropdown;
+export default Filtration;
