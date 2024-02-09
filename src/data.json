@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "title": "Classic Leather Tote",
-    "description": "A timeless leather tote bag that combines style and functionality.",
+    "title":"Classic Leather Tote",
+    "description":"A timeless leather tote bag that combines style and functionality.",
     "price": 99.99,
     "image_url":"https://img.freepik.com/free-photo/hand-bag-layout-with-place-text-women-s-accessories-jewellery-background-mockup-banner-fashion-accessories_460848-13210.jpg?size=626&ext=jpg",
-    "size": ["SMALL",  "LARGE"]
+    "sizes":["SMALL","MEDIUM"]
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "A sleek and durable canvas backpack for your everyday adventures.",
     "price": 59.99,
     "image_url":"https://img.freepik.com/free-photo/fashion-hand-new-women-luxury_1203-6508.jpg?size=626&ext=jpg",
-    "size": ["SMALL", "MEDIUM", "LARGE"]
+    "sizes":["SMALL","MEDIUM"]
   },
   {
     "id": 3,
@@ -21,15 +21,15 @@
     "description": "Spacious duffel bag with multiple compartments, perfect for travel enthusiasts.",
     "price": 79.99,
     "image_url":"https://img.freepik.com/free-photo/beautiful-elegance-luxury-fashion-green-handbag_1203-7655.jpg?size=626&ext=jpg",
-    "size": ["SMALL", "MEDIUM"]
+    "sizes":["SMALL","MEDIUM"]
   },
   {
     "id": 4,
-    "title": "Chic Crossbows Purse",
+    "title":"Chic Crossbows Purse",
     "description": "Stylish crossbow purse for a trendy and convenient everyday carry.",
     "price": 49.99,
     "image_url":"https://img.freepik.com/free-photo/handbag_1203-8313.jpg?size=626&ext=jpg",
-    "size": ["LARGE"]
+    "sizes":["SMALL","MEDIUM"]
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "description": "A versatile and durable backpack designed for gym-goers and athletes.",
     "price": 69.99,
     "image_url":"https://img.freepik.com/free-photo/color-purple-elegance-woman-luxury_1203-6518.jpg?size=626&ext=jpg",
-    "size": ["SMALL"]
+    "sizes":["SMALL","MEDIUM"]
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "description": "Classic leather messenger bag with a touch of vintage charm.",
     "price": 89.99,
     "image_url":"https://img.freepik.com/premium-photo/blue-fabric-suitcase-isolated_112112-646.jpg?size=626&ext=jpg",
-    "size": ["MEDIUM"]
+    "sizes":["LARGE"]
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "description": "Sleek and fashionable laptop bag with padded compartments for protection.",
     "price": 74.99,
     "image_url":"https://img.freepik.com/premium-photo/large-suitcase_692498-1893.jpg?size=626&ext=jpg",
-    "size": ["SMALL", "MEDIUM", "LARGE"]
+    "sizes":["LARGE"]
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "description": "Durable and spacious backpack for outdoor enthusiasts and hikers.",
     "price": 89.99,
     "image_url":"https://img.freepik.com/free-psd/view-hawaiian-shirt-with-luggage_23-2150819301.jpg?size=626&ext=jpg",
-    "size": [ "LARGE"]
+    "sizes":["LARGE"]
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "description": "Casual and versatile canvas tote bag for everyday use.",
     "price": 39.99,
     "image_url":"https://img.freepik.com/free-photo/handbag_1203-8313.jpg?size=626&ext=jpg",
-    "size": ["SMALL"]
+    "sizes":["SMALL"]
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "description": "Professional and stylish briefcase designed for executives on the go.",
     "price": 109.99,
     "image_url":"https://img.freepik.com/free-photo/new-color-purse-luxury-handbag_1203-6519.jpg?size=626&ext=jpg",
-    "size": ["MEDIUM" ]
+    "sizes":["MEDIUM" ]
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "description": "Adorable and colorful backpack for kids featuring their favorite cartoons.",
     "price": 29.99,
     "image_url":"https://img.freepik.com/free-photo/luxury-woman-handbag_1203-8393.jpg?size=626&ext=jpg",
-    "size": ["SMALL"]
+    "sizes":["SMALL"]
   },
   {
     "id": 12,
@@ -93,6 +93,6 @@
     "description": "Elegant and minimalist leather clutch for a night out or special occasions.",
     "price": 54.99,
     "image_url":"https://img.freepik.com/premium-photo/fashionable-women-s-handbag-white-background-studio-shooting_508835-6688.jpg?size=626&ext=jpg",
-    "size": [ "LARGE"]
+    "sizes":["SMALL","MEDIUM"]
   }
 ]
