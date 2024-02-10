@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-const Header = () => {
+import { FiShoppingCart } from "react-icons/fi";
+import Cart from "./Cart";
+
+const Header = ({ cartItem }) => {
+  const [isCartOpen, setCartOpen] = useState(false);
+
+  const toggleCart = () => {
+    setCartOpen(!isCartOpen);
+  };
   return (
     <nav className=" flex flex-col shadow-md  py-4 gap-7 justify-around items-center sm:flex-row">
       <Link to="/">
@@ -16,7 +24,7 @@ const Header = () => {
           Beside fine bags
         </h2>
       </Link>
-      <ul className="flex gap-6 sm:gap-16 ">
+      <ul className="flex gap-4 sm:gap-16 ">
         <li>
           <Link to="/" className=" text-gray-600 hover:text-gray-800  ">
             Home
@@ -38,16 +46,20 @@ const Header = () => {
           </a>
         </li>
         <li>
-          <a href="#collections" className=" text-gray-600 hover:text-gray-800">
-            Collections
-          </a>
-        </li>
-        <li>
           <Link to="/shop" className=" text-gray-600 hover:text-gray-800">
             Shop
           </Link>
         </li>
+        <li>
+          <Link to="#" className=" text-gray-600 hover:text-gray-800">
+            <FiShoppingCart
+              className="text-xl cursor-pointer"
+              onClick={toggleCart}
+            ></FiShoppingCart>
+          </Link>
+        </li>
       </ul>
+      {isCartOpen && <Cart onClose={toggleCart} cartItem={cartItem} />}
     </nav>
   );
 };
