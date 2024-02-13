@@ -2,7 +2,12 @@ import React from "react";
 import { IoIosCloseCircle } from "react-icons/io";
 import { BsCartX } from "react-icons/bs";
 
-const Cart = ({ onClose, cartItem }) => {
+const Cart = ({ onClose, cartItem, removeFromCart }) => {
+  const total = Math.round(
+    cartItem.reduce((acc, product) => {
+      return acc + product.price * product.qty;
+    }, 0)
+  );
   return (
     <div className="fixed top-0 right-0 bg-opacity-50 flex justify-end items-start p-4 z-50">
       <div className="bg-white p-4 rounded-md w-80 shadow-md overflow-y-auto max-h-screen">
@@ -31,7 +36,9 @@ const Cart = ({ onClose, cartItem }) => {
                   </div>
                   <div className=" flex flex-col gap-4">
                     <h1>${el.price}</h1>
-                    <button className="bg-black cursor-pointer transition duration-1000 ease-in-out text-white rounded-sm p-2 hover:bg-white hover:text-black ">
+                    <button 
+                    onClick={() => removeFromCart(el.id)}
+                    className="bg-black cursor-pointer transition duration-1000 ease-in-out text-white rounded-sm p-2 hover:bg-white hover:text-black" >
                       Remove
                     </button>
                   </div>
@@ -42,7 +49,7 @@ const Cart = ({ onClose, cartItem }) => {
             <hr></hr>
             <div className="mt-4 ">
               <p className="text-gray-700 mb-2">Total:</p>
-              <h3 className="text-xl font-bold">$XX.XX</h3>
+              <h3 className="text-xl font-bold">$ {total}</h3>
             </div>
             <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md">
               Checkout

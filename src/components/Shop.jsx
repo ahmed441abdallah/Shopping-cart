@@ -11,7 +11,9 @@ const Shop = ({
 }) => {
   return (
     <div className="container mx-auto px-8 ">
-      <h1 className="text-center text-5xl my-8">Browse Products</h1>
+      <h1 className="text-center text-2xl bold sm:text-4xl my-8">
+        Some Products
+      </h1>
       <div>
         <Filter
           handleSizeChange={handleSizeChange}

@@ -18,7 +18,7 @@
   {
     "id": 3,
     "title": "Traveler's Duffel Bag",
-    "description": "Spacious duffel bag with multiple compartments, perfect for travel enthusiasts.",
+    "description": "Spacious duffel bag with multiple compartments, ",
     "price": 79.99,
     "image_url":"https://img.freepik.com/free-photo/beautiful-elegance-luxury-fashion-green-handbag_1203-7655.jpg?size=626&ext=jpg",
     "sizes":["SMALL","MEDIUM"]

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import Cart from "./Cart";
 
-const Header = ({ cartItem }) => {
+const Header = ({ cartItem, removeFromCart }) => {
   const [isCartOpen, setCartOpen] = useState(false);
 
   const toggleCart = () => {
@@ -59,7 +59,13 @@ const Header = ({ cartItem }) => {
           </Link>
         </li>
       </ul>
-      {isCartOpen && <Cart onClose={toggleCart} cartItem={cartItem} />}
+      {isCartOpen && (
+        <Cart
+          onClose={toggleCart}
+          cartItem={cartItem}
+          removeFromCart={removeFromCart}
+        />
+      )}
     </nav>
   );
 };
