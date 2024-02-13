@@ -42,10 +42,14 @@ function App() {
       setCartItem([...cartItem, { ...item, qty: 1 }]); // push
     }
   };
+  const removeFromCart = (id) => {
+    const filteredItems = cartItem.filter((el) => el.id !== id);
+    setCartItem([...filteredItems]);
+  };
   return (
     <BrowserRouter>
       <>
-        <Header cartItem={cartItem}></Header>
+        <Header cartItem={cartItem} removeFromCart={removeFromCart}></Header>
         <Routes>
           <Route path="/" element={<Landing></Landing>}></Route>
           <Route
