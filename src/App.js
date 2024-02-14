@@ -4,6 +4,8 @@ import Shop from "./components/Shop";
 import Landing from "./pages/Landing";
 import productsData from "../src/data.json";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Checkout from "./components/Checkout";
+
 function App() {
   const [products, setProducts] = useState(productsData);
   const [size, setSize] = useState("");
@@ -51,9 +53,9 @@ function App() {
       <>
         <Header cartItem={cartItem} removeFromCart={removeFromCart}></Header>
         <Routes>
-          <Route path="/" element={<Landing></Landing>}></Route>
+          <Route path="/" index element={<Landing></Landing>} />
           <Route
-            path="/shop"
+            path="shop"
             element={
               <Shop
                 products={products}
@@ -62,9 +64,10 @@ function App() {
                 handleOrderChange={handleOrderChange}
                 handleSizeChange={handleSizeChange}
                 addToCart={addToCart}
-              ></Shop>
+              />
             }
           ></Route>
+          <Route path="shop/checkout" element={<Checkout />}></Route>
         </Routes>
       </>
     </BrowserRouter>
