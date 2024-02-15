@@ -4,7 +4,7 @@
     "title":"Classic Leather Tote",
     "description":"A timeless leather tote bag that combines style and functionality.",
     "price": 99.99,
-    "image_url":"https://img.freepik.com/free-photo/hand-bag-layout-with-place-text-women-s-accessories-jewellery-background-mockup-banner-fashion-accessories_460848-13210.jpg?size=626&ext=jpg",
+    "image_url":"https://images.wallpaperscraft.com/image/single/tourist_traveler_backpack_179602_300x255.jpg",
     "sizes":["SMALL","MEDIUM"]
   },
   {
@@ -12,7 +12,7 @@
     "title": "Modern Canvas Backpack",
     "description": "A sleek and durable canvas backpack for your everyday adventures.",
     "price": 59.99,
-    "image_url":"https://img.freepik.com/free-photo/fashion-hand-new-women-luxury_1203-6508.jpg?size=626&ext=jpg",
+    "image_url":"https://images.wallpaperscraft.com/image/single/photographer_camera_skateboard_179634_300x255.jpg",
     "sizes":["SMALL","MEDIUM"]
   },
   {
@@ -20,7 +20,7 @@
     "title": "Traveler's Duffel Bag",
     "description": "Spacious duffel bag with multiple compartments, ",
     "price": 79.99,
-    "image_url":"https://img.freepik.com/free-photo/beautiful-elegance-luxury-fashion-green-handbag_1203-7655.jpg?size=626&ext=jpg",
+    "image_url":"https://images.wallpaperscraft.com/image/single/backpack_mountain_lake_197548_300x255.jpg",
     "sizes":["SMALL","MEDIUM"]
   },
   {
@@ -28,7 +28,7 @@
     "title":"Chic Crossbows Purse",
     "description": "Stylish crossbow purse for a trendy and convenient everyday carry.",
     "price": 49.99,
-    "image_url":"https://img.freepik.com/free-photo/handbag_1203-8313.jpg?size=626&ext=jpg",
+    "image_url":"https://images.wallpaperscraft.com/image/single/man_backpack_hood_197610_300x255.jpg",
     "sizes":["SMALL","MEDIUM"]
   },
   {
@@ -36,7 +36,7 @@
     "title": "Sports Gym Backpack",
     "description": "A versatile and durable backpack designed for gym-goers and athletes.",
     "price": 69.99,
-    "image_url":"https://img.freepik.com/free-photo/color-purple-elegance-woman-luxury_1203-6518.jpg?size=626&ext=jpg",
+    "image_url":"https://images.wallpaperscraft.com/image/single/man_backpack_snow_198112_300x255.jpg",
     "sizes":["SMALL","MEDIUM"]
   },
   {
@@ -44,7 +44,7 @@
     "title": "Vintage Leather Messenger Bag",
     "description": "Classic leather messenger bag with a touch of vintage charm.",
     "price": 89.99,
-    "image_url":"https://img.freepik.com/premium-photo/blue-fabric-suitcase-isolated_112112-646.jpg?size=626&ext=jpg",
+    "image_url":"https://images.wallpaperscraft.com/image/single/bonfire_ax_backpack_194466_300x255.jpg",
     "sizes":["LARGE"]
   },
   {
@@ -52,7 +52,7 @@
     "title": "Fashionable Laptop Bag",
     "description": "Sleek and fashionable laptop bag with padded compartments for protection.",
     "price": 74.99,
-    "image_url":"https://img.freepik.com/premium-photo/large-suitcase_692498-1893.jpg?size=626&ext=jpg",
+    "image_url":"https://images.wallpaperscraft.com/image/single/man_backpack_tourist_192666_300x255.jpg",
     "sizes":["LARGE"]
   },
   {
@@ -60,7 +60,7 @@
     "title": "Outdoor Adventure Backpack",
     "description": "Durable and spacious backpack for outdoor enthusiasts and hikers.",
     "price": 89.99,
-    "image_url":"https://img.freepik.com/free-psd/view-hawaiian-shirt-with-luggage_23-2150819301.jpg?size=626&ext=jpg",
+    "image_url":"https://images.wallpaperscraft.com/image/single/backpack_pockets_hand_168804_300x255.jpg",
     "sizes":["LARGE"]
   },
   {
@@ -68,7 +68,7 @@
     "title": "Casual Canvas Tote",
     "description": "Casual and versatile canvas tote bag for everyday use.",
     "price": 39.99,
-    "image_url":"https://img.freepik.com/free-photo/handbag_1203-8313.jpg?size=626&ext=jpg",
+    "image_url":"https://images.wallpaperscraft.com/image/single/climber_man_equipment_188998_300x255.jpg",
     "sizes":["SMALL"]
   },
   {
@@ -76,7 +76,7 @@
     "title": "Executive Laptop Briefcase",
     "description": "Professional and stylish briefcase designed for executives on the go.",
     "price": 109.99,
-    "image_url":"https://img.freepik.com/free-photo/new-color-purse-luxury-handbag_1203-6519.jpg?size=626&ext=jpg",
+    "image_url":"https://images.wallpaperscraft.com/image/single/man_hood_backpack_187104_300x255.jpg",
     "sizes":["MEDIUM" ]
   },
   {
@@ -84,7 +84,7 @@
     "title": "Kids' Cartoon Backpack",
     "description": "Adorable and colorful backpack for kids featuring their favorite cartoons.",
     "price": 29.99,
-    "image_url":"https://img.freepik.com/free-photo/luxury-woman-handbag_1203-8393.jpg?size=626&ext=jpg",
+    "image_url":"https://images.wallpaperscraft.com/image/single/man_backpack_legs_181446_300x255.jpg",
     "sizes":["SMALL"]
   },
   {
@@ -92,7 +92,7 @@
     "title": "Minimalist Leather Clutch",
     "description": "Elegant and minimalist leather clutch for a night out or special occasions.",
     "price": 54.99,
-    "image_url":"https://img.freepik.com/premium-photo/fashionable-women-s-handbag-white-background-studio-shooting_508835-6688.jpg?size=626&ext=jpg",
+    "image_url":"https://images.wallpaperscraft.com/image/single/man_photographer_trees_181415_300x255.jpg",
     "sizes":["SMALL","MEDIUM"]
   }
 ]
