@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ProductModal from "./ProductModal";
+import Rating from "./Rating";
 const Product = ({ product, addToCart }) => {
   const [productDetails, setProductDetails] = useState("");
   const openModal = (product) => {
@@ -9,7 +10,7 @@ const Product = ({ product, addToCart }) => {
     setProductDetails(false);
   };
   return (
-    <div className=" text-center sm:text-left mb-4 rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+    <div className=" text-center sm:text-left mb-4 rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] ">
       <div
         className="relative overflow-hidden bg-cover bg-no-repeat"
         data-te-ripple-init
@@ -30,6 +31,7 @@ const Product = ({ product, addToCart }) => {
         </h5>
         <p className="mb-4 text-base">{product.description}</p>
         <h1 className=" m-2 text-gray-500"> ${product.price}</h1>
+        <Rating></Rating>
         <button
           type="button"
           className=" mx-auto sm:mx-0 items-center rounded bg-black text-white  px-6 pb-2 pt-2.5 text-xs font-medium capitalize leading-normal ]"

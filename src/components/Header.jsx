@@ -24,7 +24,7 @@ const Header = ({ cartItem, removeFromCart }) => {
           O live
         </h2>
       </Link>
-      <ul className="flex gap-7 sm:gap-16">
+      <ul className="flex gap-4 sm:gap-16">
         <li>
           <Link to="/" className=" text-gray-600 hover:text-gray-800  ">
             Home
@@ -57,7 +57,7 @@ const Header = ({ cartItem, removeFromCart }) => {
               onClick={toggleCart}
             ></FiShoppingCart>
             {cartItem.length >= 1 && (
-              <span className=" absolute top-[-4px]  text-white right-6 bg-slate-400 w-5 h-5 text-sm rounded-full flex justify-center items-center">
+              <span className=" absolute top-[-8px] right-6  bg-slate-300 w-5 h-5 text-sm rounded-full flex justify-center items-center">
                 {cartItem.length}
               </span>
             )}
