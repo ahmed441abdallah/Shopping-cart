@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import Cart from "./Cart";
 
-const Header = ({ cartItem, removeFromCart }) => {
+const Header = ({ cartItem, removeFromCart, shouldRender }) => {
   const [isCartOpen, setCartOpen] = useState(false);
-
   const toggleCart = () => {
     setCartOpen(!isCartOpen);
   };

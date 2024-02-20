@@ -3,10 +3,6 @@ const mongoose = require("mongoose");
 // Define product schema
 const productSchema = new mongoose.Schema(
   {
-    id: {
-      type: Number,
-      required: true,
-    },
     title: {
       type: String,
       required: true,
