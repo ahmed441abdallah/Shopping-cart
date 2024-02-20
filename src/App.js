@@ -1,16 +1,22 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Header from "./components/Header";
 import Shop from "./components/Shop";
 import Landing from "./pages/Landing";
 import productsData from "../src/data.json";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import Checkout from "./components/Checkout";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Page404 from "./pages/404Page";
 
 function App() {
   const [products, setProducts] = useState(productsData);
   const [size, setSize] = useState("");
   const [order, setOrder] = useState("");
   const [cartItem, setCartItem] = useState([]);
+  const [isLogin, setIsLogin] = useState(false);
+  const navigate = useNavigate();
+
   const handleSizeChange = (e) => {
     setSize(e.target.value);
     if (e.target.value === "ALL") {
@@ -19,9 +25,10 @@ function App() {
       const filteredProducts = productsData.filter((product) =>
         product.sizes.includes(e.target.value)
       );
-      setProducts([...filteredProducts]); // Make a copy of the filtered array
+      setProducts([...filteredProducts]);
     }
   };
+
   const handleOrderChange = (e) => {
     setOrder(e.target.value);
     const filteredProducts = productsData.sort(function (a, b) {
@@ -35,42 +42,50 @@ function App() {
     });
     setProducts([...filteredProducts]);
   };
+
   const addToCart = (item) => {
-    const existingItem = cartItem.find((el) => el.id === item.id);
-    if (existingItem) {
-      existingItem.qty++;
-      setCartItem([...cartItem]);
+    if (isLogin) {
+      const existingItem = cartItem.find((el) => el.id === item.id);
+      if (existingItem) {
+        existingItem.qty++;
+        setCartItem([...cartItem]);
+      } else {
+        setCartItem([...cartItem, { ...item, qty: 1 }]);
+      }
     } else {
-      setCartItem([...cartItem, { ...item, qty: 1 }]); // push
+      navigate("/login");
     }
   };
+
   const removeFromCart = (id) => {
     const filteredItems = cartItem.filter((el) => el.id !== id);
     setCartItem([...filteredItems]);
   };
+
   return (
-    <BrowserRouter>
-      <>
-        <Header cartItem={cartItem} removeFromCart={removeFromCart}></Header>
-        <Routes>
-          <Route path="/" index element={<Landing></Landing>} />
-          <Route
-            path="shop"
-            element={
-              <Shop
-                products={products}
-                size={size}
-                order={order}
-                handleOrderChange={handleOrderChange}
-                handleSizeChange={handleSizeChange}
-                addToCart={addToCart}
-              />
-            }
-          ></Route>
-          <Route path="shop/checkout" element={<Checkout />}></Route>
-        </Routes>
-      </>
-    </BrowserRouter>
+    <Fragment>
+      <Header cartItem={cartItem} removeFromCart={removeFromCart} />
+      <Routes>
+        <Route path="/" index element={<Landing />} />
+        <Route
+          path="shop"
+          element={
+            <Shop
+              products={products}
+              size={size}
+              order={order}
+              handleOrderChange={handleOrderChange}
+              handleSizeChange={handleSizeChange}
+              addToCart={addToCart}
+            />
+          }
+        />
+        <Route path="shop/checkout" element={<Checkout />} />
+        <Route path="/login" element={<Login setIsLogin={setIsLogin} />} />
+        <Route path="/signup" element={<Register />} />
+        <Route path="*" element={<Page404 />}></Route>
+      </Routes>
+    </Fragment>
   );
 }
 
