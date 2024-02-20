@@ -24,7 +24,6 @@ const Register = () => {
     } catch (error) {
       if (error.response) {
         setError(error.response.data.message);
-        console.log(error);
         // Handle specific error messages from the backend
       } else {
         setError("An unexpected error occurred");

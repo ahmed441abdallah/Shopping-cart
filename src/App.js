@@ -3,17 +3,19 @@ import Header from "./components/Header";
 import Shop from "./components/Shop";
 import Landing from "./pages/Landing";
 import productsData from "../src/data.json";
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Checkout from "./components/Checkout";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Page404 from "./pages/404Page";
+import Wishlist from "./components/Wishlist ";
 
 function App() {
   const [products, setProducts] = useState(productsData);
   const [size, setSize] = useState("");
   const [order, setOrder] = useState("");
   const [cartItem, setCartItem] = useState([]);
+  const [wishListItem, setWishListItem] = useState([]);
   const [isLogin, setIsLogin] = useState(false);
   const navigate = useNavigate();
 
@@ -61,12 +63,34 @@ function App() {
     const filteredItems = cartItem.filter((el) => el.id !== id);
     setCartItem([...filteredItems]);
   };
+  const addWishList = (item) => {
+    const existingWhistingItem = wishListItem.find((el) => el.id === item.id);
+    if (existingWhistingItem) {
+      setWishListItem([...wishListItem]);
+    } else {
+      setWishListItem([...wishListItem, item]);
+    }
+  };
+  const removeFromWhishList = (id) => {
+    const filteredItems = wishListItem.filter((el) => el.id !== id);
+    setWishListItem([...filteredItems]);
+  };
 
   return (
     <Fragment>
       <Header cartItem={cartItem} removeFromCart={removeFromCart} />
       <Routes>
         <Route path="/" index element={<Landing />} />
+        <Route
+          path="/wish"
+          element={
+            <Wishlist
+              wishListItem={wishListItem}
+              addToCart={addToCart}
+              removeFromWhishList={removeFromWhishList}
+            ></Wishlist>
+          }
+        ></Route>
         <Route
           path="shop"
           element={
@@ -77,11 +101,13 @@ function App() {
               handleOrderChange={handleOrderChange}
               handleSizeChange={handleSizeChange}
               addToCart={addToCart}
+              addWishList={addWishList}
             />
           }
         />
         <Route path="shop/checkout" element={<Checkout />} />
         <Route path="/login" element={<Login setIsLogin={setIsLogin} />} />
+
         <Route path="/signup" element={<Register />} />
         <Route path="*" element={<Page404 />}></Route>
       </Routes>

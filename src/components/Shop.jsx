@@ -8,6 +8,7 @@ const Shop = ({
   order,
   products,
   addToCart,
+  addWishList,
 }) => {
   return (
     <div className="container mx-auto px-8 ">
@@ -22,7 +23,11 @@ const Shop = ({
           handleOrderChange={handleOrderChange}
           order={order}
         ></Filter>
-        <ProductList products={products} addToCart={addToCart}></ProductList>
+        <ProductList
+          products={products}
+          addToCart={addToCart}
+          addWishList={addWishList}
+        ></ProductList>
       </div>
     </div>
   );

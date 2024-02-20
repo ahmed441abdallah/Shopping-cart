@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title":"Classic Leather Tote",
-    "description":"A timeless leather tote bag that combines style and functionality.",
+    "description":"A timeless leather tote bag that style,functionality,Everyday adventures",
     "price": 99.99,
     "image_url":"https://images.wallpaperscraft.com/image/single/tourist_traveler_backpack_179602_300x255.jpg",
     "sizes":["SMALL","MEDIUM"]
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "title": "Traveler's Duffel Bag",
-    "description": "Spacious duffel bag with multiple compartments, ",
+    "description": "Spacious duffel bag with multiple compartments,bag that style,functionality ",
     "price": 79.99,
     "image_url":"https://images.wallpaperscraft.com/image/single/backpack_mountain_lake_197548_300x255.jpg",
     "sizes":["SMALL","MEDIUM"]
@@ -57,8 +57,8 @@
   },
   {
     "id": 8,
-    "title": "Outdoor Adventure Backpack",
-    "description": "Durable and spacious backpack for outdoor enthusiasts and hikers.",
+    "title": "Outdoor Backpack",
+    "description": "Durable and spacious backpack for outdoor enthusiasts protection.",
     "price": 89.99,
     "image_url":"https://images.wallpaperscraft.com/image/single/backpack_pockets_hand_168804_300x255.jpg",
     "sizes":["LARGE"]
@@ -66,7 +66,7 @@
   {
     "id": 9,
     "title": "Casual Canvas Tote",
-    "description": "Casual and versatile canvas tote bag for everyday use.",
+    "description": "Casual and versatile canvas tote bag for everyday use,and more sports .",
     "price": 39.99,
     "image_url":"https://images.wallpaperscraft.com/image/single/climber_man_equipment_188998_300x255.jpg",
     "sizes":["SMALL"]
@@ -74,7 +74,7 @@
   {
     "id": 10,
     "title": "Executive Laptop Briefcase",
-    "description": "Professional and stylish briefcase designed for executives on the go.",
+    "description": "Professional and stylish briefcase designed for executives.",
     "price": 109.99,
     "image_url":"https://images.wallpaperscraft.com/image/single/man_hood_backpack_187104_300x255.jpg",
     "sizes":["MEDIUM" ]

@@ -35,9 +35,9 @@ const Header = ({ cartItem, removeFromCart, shouldRender }) => {
           </a>
         </li>
         <li>
-          <a href="#feature" className=" text-gray-600 hover:text-gray-800">
-            Features
-          </a>
+          <Link to="/wish" className=" text-gray-600 hover:text-gray-800">
+            Wishlist
+          </Link>
         </li>
         <li>
           <a href="#Categories" className=" text-gray-600 hover:text-gray-800">

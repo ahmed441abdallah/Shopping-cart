@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import ProductModal from "./ProductModal";
 import Rating from "./Rating";
-const Product = ({ product, addToCart }) => {
+import { CiHeart } from "react-icons/ci";
+import { FaHeart } from "react-icons/fa";
+
+const Product = ({ product, addToCart, addWishList }) => {
   const [productDetails, setProductDetails] = useState("");
+  const [whishedList, setWhishedList] = useState(false);
+
   const openModal = (product) => {
     setProductDetails(product);
   };
@@ -32,15 +37,31 @@ const Product = ({ product, addToCart }) => {
         <p className="mb-4 text-base">{product.description}</p>
         <h1 className=" m-2 text-gray-500"> ${product.price}</h1>
         <Rating></Rating>
-        <button
-          type="button"
-          className=" mx-auto sm:mx-0 items-center rounded bg-black text-white  px-6 pb-2 pt-2.5 text-xs font-medium capitalize leading-normal ]"
-          data-te-ripple-init
-          data-te-ripple-color="light"
-          onClick={() => addToCart(product)}
-        >
-          Add to cart
-        </button>
+        <div className=" flex justify-between items-center">
+          <button
+            type="button"
+            className=" mx-auto sm:mx-0 items-center rounded bg-opacity-85 hover:bg-opacity-100 bg-black text-white  px-6 pb-2 pt-2.5 text-xs font-medium capitalize leading-normal ]"
+            onClick={() => addToCart(product)}
+          >
+            Add to cart
+          </button>
+          {whishedList ? (
+            <FaHeart
+              className=" text-2xl text-red-500 cursor-pointer"
+              onClick={() => {
+                setWhishedList(!whishedList);
+              }}
+            />
+          ) : (
+            <CiHeart
+              className=" text-2xl cursor-pointer"
+              onClick={() => {
+                setWhishedList(!whishedList);
+                addWishList(product);
+              }}
+            />
+          )}
+        </div>
       </div>
       {
         <ProductModal
