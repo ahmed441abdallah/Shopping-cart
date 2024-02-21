@@ -66,7 +66,7 @@
   {
     "id": 9,
     "title": "Casual Canvas Tote",
-    "description": "Casual and versatile canvas tote bag for everyday use,and more sports .",
+    "description": "Casual and versatile canvas tote bag for everyday use .",
     "price": 39.99,
     "image_url":"https://images.wallpaperscraft.com/image/single/climber_man_equipment_188998_300x255.jpg",
     "sizes":["SMALL"]
@@ -94,5 +94,100 @@
     "price": 54.99,
     "image_url":"https://images.wallpaperscraft.com/image/single/man_photographer_trees_181415_300x255.jpg",
     "sizes":["SMALL","MEDIUM"]
+  }, {
+    "id": 13,
+    "title":"Stylish Laptop Backpack",
+    "description":"A stylish and functional laptop backpack for professionals on the go,clutch for a night.",
+    "price": 79.99,
+    "image_url":"https://images.wallpaperscraft.com/image/single/backpack_pockets_belts_119922_300x168.jpg",
+    "sizes":["MEDIUM", "LARGE"]
+  },
+  {
+    "id": 14,
+    "title": "Weekender Travel Bag",
+    "description": "A spacious and durable travel bag perfect for weekend getaways,clutch for a night.",
+    "price": 89.99,
+    "image_url":"https://images.wallpaperscraft.com/image/single/backpack_black_leather_155463_300x168.jpg",
+    "sizes":["LARGE"]
+  },
+  {
+    "id": 15,
+    "title": "Fashionable Crossbody Purse",
+    "description": "A fashionable crossbody purse that adds style to any outfit.",
+    "price": 49.99,
+    "image_url":"https://images.wallpaperscraft.com/image/single/child_backpack_autumn_121154_300x168.jpg",
+    "sizes":["SMALL"]
+  },
+  {
+    "id": 16,
+    "title":"Hiking Backpack",
+    "description": "Durable and comfortable hiking backpack for outdoor adventures.",
+    "price": 99.99,
+    "image_url":"https://images.wallpaperscraft.com/image/single/child_backpack_mountains_54568_300x168.jpg",
+    "sizes":["MEDIUM", "LARGE"]
+  },
+  {
+    "id": 17,
+    "title": "Convertible Travel ",
+    "description": "A versatile travel backpack that can be converted into a duffel.",
+    "price": 109.99,
+    "image_url":"https://images.wallpaperscraft.com/image/single/man_backpack_legs_181446_300x168.jpg",
+    "sizes":["MEDIUM", "LARGE"]
+  },
+  {
+    "id": 18,
+    "title": "Trendy Sling Bag",
+    "description": "A trendy sling bag perfect for carrying essentials on-the-go.",
+    "price": 39.99,
+    "image_url":"https://images.wallpaperscraft.com/image/single/girl_backpack_loneliness_156584_300x168.jpg",
+    "sizes":["SMALL"]
+  },
+  {
+    "id": 19,
+    "title": "Business Travel Trolley",
+    "description": "A professional trolley bag designed for business travelers.",
+    "price": 129.99,
+    "image_url":"https://images.wallpaperscraft.com/image/single/girl_backpack_back_187037_300x168.jpg",
+    "sizes":["LARGE"]
+  },
+  {
+    "id": 20,
+    "title": "Casual Daypack",
+    "description": "A casual and lightweight daypack for everyday use,.",
+    "price": 29.99,
+    "image_url":"https://images.wallpaperscraft.com/image/single/man_backpack_black_140868_300x168.jpg",
+    "sizes":["SMALL", "MEDIUM"]
+  },
+  {
+    "id": 21,
+    "title": "Chic Leather Wallet",
+    "description": "A chic and compact leather wallet with multiple card slots,attention to detail.",
+    "price": 34.99,
+    "image_url":"https://images.wallpaperscraft.com/image/single/man_window_backpack_144803_300x168.jpg",
+    "sizes":["SMALL"]
+  },
+  {
+    "id": 22,
+    "title": "Classic Messenger Bag",
+    "description": "A classic messenger bag suitable for work or casual outings,and office work.",
+    "price": 69.99,
+    "image_url":"https://images.wallpaperscraft.com/image/single/man_forest_nature_147287_300x168.jpg",
+    "sizes":["MEDIUM"]
+  },
+  {
+    "id": 23,
+    "title": "Sporty Waist Pack",
+    "description": "A sporty waist pack ideal for runners or outdoor enthusiasts,and more than ",
+    "price": 24.99,
+    "image_url":"https://images.wallpaperscraft.com/image/single/traveler_travel_mountains_187836_300x168.jpg",
+    "sizes":["SMALL"]
+  },
+  {
+    "id": 24,
+    "title": "Designer Tote Bag",
+    "description": "A designer tote bag crafted with premium materials and attention to detail.",
+    "price": 149.99,
+    "image_url":"https://images.wallpaperscraft.com/image/single/girl_loneliness_alone_183388_300x168.jpg",
+    "sizes":["MEDIUM", "LARGE"]
   }
 ]
