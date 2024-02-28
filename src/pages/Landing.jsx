@@ -8,11 +8,11 @@ import Divider from "../components/Divider";
 import Features from "../components/Features";
 import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
-import Collections from "../components/Collections";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Questions from "../components/Questions";
+import Subscribe from "../components/Subscribe";
 
 const Landing = () => {
   useEffect(() => {
@@ -88,9 +88,8 @@ const Landing = () => {
       <Divider></Divider>
       <Questions></Questions>
       <Divider></Divider>
-
       <Gallery></Gallery>
-      <Collections></Collections>
+      <Subscribe></Subscribe>
       <Footer></Footer>
     </>
   );

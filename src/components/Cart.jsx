@@ -1,11 +1,14 @@
 import React from "react";
 import { IoIosCloseCircle } from "react-icons/io";
-import { BsCartX } from "react-icons/bs";
 import { Link } from "react-router-dom";
-
-const Cart = ({ onClose, cartItem, removeFromCart }) => {
+import empty_image from "../imgs/undraw_empty_cart_co35.png";
+import { useDispatch, useSelector } from "react-redux";
+import { removeFromCart } from "../Redux/slices/cart-slice";
+const Cart = ({ onClose }) => {
+  const { cartItems } = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
   const total = Math.round(
-    cartItem.reduce((acc, product) => {
+    cartItems.reduce((acc, product) => {
       return acc + product.price * product.qty;
     }, 0)
   );
@@ -21,10 +24,10 @@ const Cart = ({ onClose, cartItem, removeFromCart }) => {
             <IoIosCloseCircle className=" w-6 h-6"></IoIosCloseCircle>
           </button>
         </div>
-        {cartItem.length > 0 ? (
+        {cartItems.length > 0 ? (
           <>
-            {cartItem.map((el) => (
-              <div className="text-gray-700 shadow-md p-1 mb-1" key={el.id}>
+            {cartItems.map((el) => (
+              <div className="text-gray-700 shadow-md p-1 mb-1" key={el._id}>
                 <div className="flex justify-between mb-2 items-center ">
                   <div>
                     <img
@@ -38,7 +41,7 @@ const Cart = ({ onClose, cartItem, removeFromCart }) => {
                   <div className=" flex flex-col gap-4">
                     <h1>${el.price}</h1>
                     <button
-                      onClick={() => removeFromCart(el.id)}
+                      onClick={() => dispatch(removeFromCart(el._id))}
                       className="bg-black cursor-pointer transition duration-1000 ease-in-out text-white rounded-sm p-2 hover:bg-white hover:text-black"
                     >
                       Remove
@@ -54,16 +57,16 @@ const Cart = ({ onClose, cartItem, removeFromCart }) => {
               <h3 className="text-xl font-bold">$ {total}</h3>
             </div>
             <Link to="/shop/checkout">
-              {" "}
-              <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md">
+              <button className="mt-4 bg-gray-600 text-white px-4 py-2 rounded-md">
                 Checkout
               </button>
             </Link>
           </>
         ) : (
-          <h1 className="flex items-center justify-center mt-2 gap-2 bg-slate-400 p-2 rounded-sm">
-            Cart is Empty <BsCartX></BsCartX>
-          </h1>
+          <>
+            <img src={empty_image} alt="empty_image"></img>
+            <h3 className="text-center"> Your Cart is Empty</h3>
+          </>
         )}
       </div>
     </div>

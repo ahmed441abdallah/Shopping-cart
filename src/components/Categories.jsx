@@ -2,14 +2,14 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img1 from "../imgs/Surface Pro 8 – 1.png";
-import img2 from "../imgs/Surface Pro 8 – 2.png";
-import img3 from "../imgs/Surface Pro 8 – 3.png";
-import img4 from "../imgs/Surface Pro 8 – 4.png";
-import img5 from "../imgs/Surface Pro 8 – 5.png";
-import img6 from "../imgs/Surface Pro 8 – 6.png";
-import img7 from "../imgs/Surface Pro 8 – 7.png";
-import img8 from "../imgs/Surface Pro 8 – 8.png";
+import img1 from "../imgs/cat1.jpg";
+import img2 from "../imgs/cat2.jpg";
+import img3 from "../imgs/cat3.jpg";
+import img4 from "../imgs/cat4.jpg";
+import img5 from "../imgs/cat5.jpg";
+import img6 from "../imgs/cat6.jpg";
+import img7 from "../imgs/cat7.jpg";
+import img8 from "../imgs/cat8.jpg";
 
 const imgs = [img1, img2, img6, img4, img5, img3, img7, img8];
 const Categories = () => {
@@ -36,7 +36,7 @@ const Categories = () => {
         <Slider {...settings}>
           {imgs.map((el) => (
             <div>
-              <img src={el} alt="1" width="600px" height="600px"></img>
+              <img src={el} alt="1" width="500px"></img>
             </div>
           ))}
         </Slider>

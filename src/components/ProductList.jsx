@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Product from "./Product";
 
-const ProductList = ({ products, addToCart, addWishList }) => {
+const ProductList = ({ products, isLogin }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(8);
+
   const totalPages = Math.ceil(products.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -40,10 +41,9 @@ const ProductList = ({ products, addToCart, addWishList }) => {
       <div className="products grid gap-6 lg:grid-cols-4 md:grid-cols-3">
         {currentItems.map((product) => (
           <Product
-            key={product.id}
+            key={product._id}
             product={product}
-            addToCart={addToCart}
-            addWishList={addWishList}
+            isLogin={isLogin}
           ></Product>
         ))}
       </div>

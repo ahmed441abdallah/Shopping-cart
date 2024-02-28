@@ -1,16 +1,13 @@
 import React from "react";
-import { TbError404 } from "react-icons/tb";
 import { Link } from "react-router-dom";
-import { IoCloseCircleOutline } from "react-icons/io5";
+import img_404 from "../imgs/undraw_Page_not_found_re_e9o6.png";
 
 const Page404 = () => {
   return (
-    <div className="card bg-gray-300 w-1/2 h-96 mx-auto mt-20 rounded-md text-center flex flex-col justify-center ">
-      <IoCloseCircleOutline className=" mx-auto text-2xl"></IoCloseCircleOutline>
-      <TbError404 className=" text-6xl mx-auto mb-2"></TbError404>
-      <p className=" mb-2 text-xl">Page Not Found.</p>
-      <p className="mb-2">
-        You are to access to get page not found , try again
+    <div className=" w-1/2 h-96 mx-auto mt-32 rounded-md text-center flex flex-col justify-center ">
+      <img src={img_404} alt="404_img"></img>
+      <p className="mb-2 text-xl lg:text-2xl font-bold">
+        You try to access page not found , try again
       </p>
 
       <div className=" mt-2">

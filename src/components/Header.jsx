@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import Cart from "./Cart";
+import { useSelector } from "react-redux";
 
-const Header = ({ cartItem, removeFromCart, shouldRender }) => {
+const Header = ({ shouldRender }) => {
   const [isCartOpen, setCartOpen] = useState(false);
+  const { cartItems } = useSelector((state) => state.cart);
+
   const toggleCart = () => {
     setCartOpen(!isCartOpen);
   };
@@ -40,36 +43,35 @@ const Header = ({ cartItem, removeFromCart, shouldRender }) => {
           </Link>
         </li>
         <li>
-          <a href="#Categories" className=" text-gray-600 hover:text-gray-800">
-            Categories
-          </a>
-        </li>
-        <li>
           <Link to="/shop" className=" text-gray-600 hover:text-gray-800">
             Shop
           </Link>
         </li>
+        <li className="">
+          <Link
+            to="/login"
+            className=" text-white text-sm px-2 sm:px-4 rounded-sm py-1 sm:py-2  bg-black hover:text-black hover:bg-white transition-all duration-1000  "
+          >
+            Get Started
+          </Link>
+        </li>
+
         <li>
           <Link to="#" className=" text-gray-600 hover:text-gray-800 relative">
             <FiShoppingCart
               className="text-xl cursor-pointer"
               onClick={toggleCart}
             ></FiShoppingCart>
-            {cartItem.length >= 1 && (
+
+            {cartItems.length >= 1 && (
               <span className=" absolute top-[-8px] right-6  bg-slate-300 w-5 h-5 text-sm rounded-full flex justify-center items-center">
-                {cartItem.length}
+                {cartItems.length}
               </span>
             )}
           </Link>
         </li>
       </ul>
-      {isCartOpen && (
-        <Cart
-          onClose={toggleCart}
-          cartItem={cartItem}
-          removeFromCart={removeFromCart}
-        />
-      )}
+      {isCartOpen && <Cart onClose={toggleCart} />}
     </nav>
   );
 };

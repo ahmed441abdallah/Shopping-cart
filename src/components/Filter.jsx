@@ -1,15 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FaArrowCircleDown } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { setSize } from "../Redux/slices/product-slice";
+import { setOrder } from "../Redux/slices/product-slice";
+// Update the path
 
-const Filtration = ({
-  handleSizeChange,
-  size,
-  products,
-  handleOrderChange,
-  order,
-}) => {
+const Filtration = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const dispatch = useDispatch();
+  const { filteredProducts } = useSelector((state) => state.product);
+  const { selectedSize } = useSelector((state) => state.product);
+  const { order } = useSelector((state) => state.product);
+
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
@@ -28,6 +31,13 @@ const Filtration = ({
     };
   }, []);
 
+  const handleSizeChange = (event) => {
+    dispatch(setSize(event.target.value));
+  };
+  const handleOrderChange = (event) => {
+    dispatch(setOrder(event.target.value));
+  };
+
   return (
     <div className="relative flex justify-center mb-4 ">
       <button
@@ -44,7 +54,7 @@ const Filtration = ({
         >
           <div className="py-2 px-2 flex flex-col items-center ">
             <h1 className=" my-4 text-1xl bg-slate-300 p-2 rounded-md">
-              Number of Products {products.length}
+              Number of Products {filteredProducts.length}
             </h1>
             <div className="fil-size flex flex-col">
               <span className="text-1xl mb-2 bg-slate-300 p-2 rounded-md">
@@ -52,8 +62,8 @@ const Filtration = ({
               </span>
               <select
                 className="px-4 py-2"
-                value={size}
                 onChange={handleSizeChange}
+                value={selectedSize}
               >
                 <option value="ALL">ALL</option>
                 <option value="SMALL">SMALL</option>

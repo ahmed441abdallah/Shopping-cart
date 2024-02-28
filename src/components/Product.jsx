@@ -3,8 +3,14 @@ import ProductModal from "./ProductModal";
 import Rating from "./Rating";
 import { CiHeart } from "react-icons/ci";
 import { FaHeart } from "react-icons/fa";
+import { addToCart } from "../Redux/slices/cart-slice";
+import { useDispatch } from "react-redux";
+import { addToWishList } from "../Redux/slices/wish-slice";
+import { useNavigate } from "react-router-dom";
 
-const Product = ({ product, addToCart, addWishList }) => {
+const Product = ({ product, isLogin }) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [productDetails, setProductDetails] = useState("");
   const [whishedList, setWhishedList] = useState(false);
 
@@ -41,7 +47,13 @@ const Product = ({ product, addToCart, addWishList }) => {
           <button
             type="button"
             className=" mx-auto sm:mx-0 items-center rounded bg-opacity-85 hover:bg-opacity-100 bg-black text-white  px-6 pb-2 pt-2.5 text-xs font-medium capitalize leading-normal ]"
-            onClick={() => addToCart(product)}
+            onClick={() => {
+              if (isLogin) {
+                dispatch(addToCart(product));
+              } else {
+                navigate("/login");
+              }
+            }}
           >
             Add to cart
           </button>
@@ -57,7 +69,7 @@ const Product = ({ product, addToCart, addWishList }) => {
               className=" text-2xl cursor-pointer"
               onClick={() => {
                 setWhishedList(!whishedList);
-                addWishList(product);
+                dispatch(addToWishList(product));
               }}
             />
           )}

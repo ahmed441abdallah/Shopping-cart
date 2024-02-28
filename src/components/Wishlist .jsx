@@ -2,14 +2,20 @@ import React, { useState } from "react";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
 import Empty from "../imgs/Empty-amico.png";
+import { useDispatch, useSelector } from "react-redux";
+import { removeFromWishList } from "../Redux/slices/wish-slice";
+import { addToCart } from "../Redux/slices/cart-slice";
 
-const Wishlist = ({ wishListItem, addToCart, removeFromWhishList }) => {
+const Wishlist = () => {
+  const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(4);
-  const totalPages = Math.ceil(wishListItem.length / itemsPerPage);
+  const { wishListItems } = useSelector((state) => state.wishList);
+
+  const totalPages = Math.ceil(wishListItems.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const currentItems = wishListItem.slice(startIndex, endIndex);
+  const currentItems = wishListItems.slice(startIndex, endIndex);
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
@@ -38,7 +44,7 @@ const Wishlist = ({ wishListItem, addToCart, removeFromWhishList }) => {
   return (
     <div className="container mx-auto p-6">
       <h1 className="text-2xl mb-4">Wishlist 😊</h1>
-      {wishListItem.length >= 1 ? (
+      {wishListItems.length >= 1 ? (
         currentItems.map((el) => (
           <div
             className="wishlist flex justify-between items-center mb-4 shadow-lg p-2"
@@ -58,12 +64,12 @@ const Wishlist = ({ wishListItem, addToCart, removeFromWhishList }) => {
             </div>
             <div className="relative">
               <IoMdCloseCircleOutline
-                onClick={() => removeFromWhishList(el.id)}
+                onClick={() => dispatch(removeFromWishList(el._id))}
                 className="absolute top-[-30px] right-0 text-2xl cursor-pointer text-red-600"
               />
               <button
                 className="flex items-center gap-2 rounded bg-opacity-60 hover:bg-opacity-100 bg-black text-white px-4 py-4 text-xs"
-                onClick={() => addToCart(el)}
+                onClick={() => dispatch(addToCart(el))}
               >
                 Add <FaCartShopping />
               </button>
@@ -80,7 +86,7 @@ const Wishlist = ({ wishListItem, addToCart, removeFromWhishList }) => {
           <p className=" text-2xl text-center">Wishlist is empty 😶</p>
         </div>
       )}
-      {wishListItem.length >= 1 && (
+      {wishListItems.length >= 1 && (
         <nav aria-label="Page navigation example">
           <ul className="flex items-center justify-center -space-x-px h-8 text-sm">
             <li>

@@ -29,7 +29,7 @@ const productSchema = new mongoose.Schema(
   }
 );
 
-// Create Product model
+// Create Product model (collection)
 const Product = mongoose.model("Product", productSchema);
 
 module.exports = Product;
