@@ -1,12 +1,31 @@
 import React from "react";
 import { useState } from "react";
+import Modal from "react-modal";
+import { IoIosCheckmarkCircleOutline } from "react-icons/io";
+import { IoIosCloseCircle } from "react-icons/io";
+import { useSelector } from "react-redux";
 
 const Checkout = () => {
   const [shippingData, setShippingData] = useState("");
+  const [order, setOrder] = useState(false);
+  const { cartItems } = useSelector((state) => state.cart);
+  console.log(cartItems);
+  const totalPrice = Math.round(
+    cartItems.reduce((acc, product) => {
+      return acc + product.price * product.qty;
+    }, 0)
+  );
+  const totalQty = cartItems.reduce((acc, product) => {
+    return acc + product.qty;
+  }, 0);
   const handleChange = (e) => {
     setShippingData((prev) => {
       return { ...prev, [e.target.name]: e.target.value };
     });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setOrder(shippingData);
   };
   return (
     <div className=" container  mx-auto px-8">
@@ -101,12 +120,7 @@ const Checkout = () => {
       </ul>
       <h1 className=" text-center text-2xl font-bold"> Shipping Information</h1>
       <div className="block max-w-md p-8  mx-auto mt-4 ">
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            console.log(shippingData);
-          }}
-        >
+        <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-4">
             <div className="relative mb-6" data-te-input-wrapper-init>
               <input
@@ -157,12 +171,72 @@ const Checkout = () => {
 
           <button
             type="submit"
-            className="inline-block w-full rounded bg-black px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white  transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            className="inline-block w-full rounded bg-black px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white  transition duration-150 ease-in-out "
           >
             Checkout
           </button>
         </form>
       </div>
+      <Modal
+        isOpen={order}
+        className=" w-96 h-full p-4 sm:w-[650px] sm:h-[535px] relative   bg-stone-100 shadow-md mx-auto my-9 rounded-md "
+      >
+        <div className=" text-center p-4">
+          <IoIosCheckmarkCircleOutline className="text-center mb-2 text-6xl mx-auto text-green-600"></IoIosCheckmarkCircleOutline>
+          <p> Order done successfully</p>
+        </div>
+        <IoIosCloseCircle
+          className=" absolute top-0 right-0 text-xl cursor-pointer"
+          onClick={() => setOrder(false)}
+        />
+        <hr></hr>
+        <div class="relative overflow-x-auto mt-1">
+          <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-100 ">
+              <tr>
+                <th scope="col" class="px-6 py-3 rounded-s-lg">
+                  Product name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                  Qty
+                </th>
+                <th scope="col" class="px-6 py-3 rounded-e-lg">
+                  Price
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {cartItems.map((item) => (
+                <tr class="bg-white ">
+                  <th
+                    scope="row"
+                    class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                  >
+                    {item.title}
+                  </th>
+                  <td class="px-6 py-4"> {item.qty}</td>
+                  <td class="px-6 py-4">${item.price}</td>
+                </tr>
+              ))}
+            </tbody>
+            <tfoot>
+              <tr class="font-semibold text-gray-900 ">
+                <th scope="row" class="px-6 py-3 text-base">
+                  Total
+                </th>
+                <td class="px-6 py-3">{totalQty}</td>
+                <td class="px-6 py-3">${totalPrice}</td>
+              </tr>
+            </tfoot>
+          </table>
+          <hr></hr>
+          <div className="person-info mt-3">
+            <h3 className=" mb-1">Your Name : {order.fname + order.lname}</h3>
+            <h3 className=" mb-1"> Email: {order.email}</h3>
+            <h3 className=" mb-1"> Address : {order.address}</h3>
+          </div>
+        </div>
+      </Modal>
     </div>
   );
 };

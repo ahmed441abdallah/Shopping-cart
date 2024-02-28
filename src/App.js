@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Page404 from "./pages/404Page";
 import Wishlist from "./components/Wishlist ";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
@@ -17,8 +18,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" index element={<Landing />} />
-        <Route path="/wish" element={<Wishlist></Wishlist>}></Route>
+        <Route path="/wish" element={<Wishlist />}></Route>
         <Route path="shop" element={<Shop isLogin={isLogin} />} />
+        <Route path="/contact" element={<ContactPage />}></Route>
         <Route path="shop/checkout" element={<Checkout />} />
         <Route path="/login" element={<Login setIsLogin={setIsLogin} />} />
         <Route path="/signup" element={<Register />} />

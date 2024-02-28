@@ -33,9 +33,9 @@ const Header = ({ shouldRender }) => {
           </Link>
         </li>
         <li>
-          <a href="#gallery" className=" text-gray-600 hover:text-gray-800">
-            Gallery
-          </a>
+          <Link to="/contact" className=" text-gray-600 hover:text-gray-800">
+            Contact
+          </Link>
         </li>
         <li>
           <Link to="/wish" className=" text-gray-600 hover:text-gray-800">
