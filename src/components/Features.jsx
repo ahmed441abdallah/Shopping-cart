@@ -11,12 +11,12 @@ const Features = () => {
           data-aos-duration="3000"
           data-aos-delay="0"
         >
-          <div className="flex p-8 gap-5">
-            <h2 className=" bg-red-300 text-xl circle font-bold w-20 h-16 flex justify-center items-center">
+          <div className="flex p-8 gap-4">
+            <h2 className=" bg-red-300 rounded-sm text-xl  font-bold w-20 h-16 flex justify-center items-center">
               1
             </h2>
             <div>
-              <h3 className="text-2xl font-bold">Fast delivery 🚚</h3>
+              <h3 className="text-xl font-bold">Fast delivery 🚚</h3>
               <p className="text-gray-600 mt-2">
                 We prioritize the acceleration of delivery
               </p>
@@ -30,11 +30,11 @@ const Features = () => {
           data-aos-delay="400"
         >
           <div className="flex p-8 gap-4">
-            <h2 className="bg-yellow-300 circle font-bold text-xl w-20 h-16 flex justify-center items-center">
+            <h2 className="bg-yellow-300 rounded-sm  font-bold text-xl w-20 h-16 flex justify-center items-center">
               2
             </h2>
             <div>
-              <h3 className="text-2xl font-bold">Custom order 📦</h3>
+              <h3 className="text-xl font-bold">custom order📦</h3>
               <p className="text-gray-600 mt-2">
                 We aim to exceed your expectations
               </p>
@@ -48,11 +48,11 @@ const Features = () => {
           data-aos-delay="600"
         >
           <div className="flex p-8 gap-4">
-            <h2 className="bg-green-300 text-xl circle w-20 h-16 flex justify-center items-center">
+            <h2 className="bg-green-300 rounded-sm text-xl  w-20 h-16 flex justify-center items-center">
               3
             </h2>
             <div>
-              <h3 className="text-2xl font-bold">High quality 💯</h3>
+              <h3 className="text-xl font-bold">High quality💯</h3>
               <p className="text-gray-600 mt-2">
                 Permeates every aspect of our operations
               </p>
@@ -65,12 +65,12 @@ const Features = () => {
           data-aos-duration="3000"
           data-aos-delay="800"
         >
-          <div className="flex p-8 gap-5">
-            <h2 className="bg-green-500 text-xl circle w-20 h-16 flex justify-center items-center">
+          <div className="flex p-8 gap-4">
+            <h2 className="bg-green-500 rounded-sm text-xl  w-20 h-16 flex justify-center items-center">
               4
             </h2>
             <div>
-              <h3 className="text-2xl font-bold">Coupon saving 🪙</h3>
+              <h3 className="text-xl font-bold ">Coupon saving 🪙</h3>
               <p className="text-gray-600 mt-2">
                 Up to 40% for all summer collections
               </p>

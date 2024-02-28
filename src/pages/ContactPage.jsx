@@ -42,7 +42,7 @@ function ContactPage() {
               </label>
               <input
                 type="text"
-                name="from_name"
+                name="user_name"
                 id="name"
                 required
                 className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
@@ -58,7 +58,7 @@ function ContactPage() {
               <input
                 type="email"
                 id="email"
-                name="to_name"
+                name="user_email"
                 required
                 className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
               />
@@ -101,12 +101,12 @@ function ContactPage() {
       >
         <div className=" text-center p-4  ">
           <IoIosCheckmarkCircleOutline className="text-center mb-4  text-8xl mx-auto text-green-600"></IoIosCheckmarkCircleOutline>
-          <p> You Message has been sent</p>
+          <p className=" text-xl"> Your Message has been sent</p>
         </div>
         <IoIosCloseCircle
           className=" absolute top-0 right-0 text-xl cursor-pointer"
           onClick={() => setShowModal(false)}
-        />{" "}
+        />
       </Modal>
     </div>
   );

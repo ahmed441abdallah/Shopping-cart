@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import Modal from "react-modal";
+import emailjs from "@emailjs/browser";
+
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { IoIosCloseCircle } from "react-icons/io";
 import { useSelector } from "react-redux";
@@ -26,6 +28,47 @@ const Checkout = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setOrder(shippingData);
+    const orderDetails = cartItems
+      .map(
+        (item) =>
+          `Product: ${item.title}, Quantity: ${
+            item.qty
+          }, Price: $${item.price.toFixed(2)}`
+      )
+      .join("\n");
+    const emailMessage = `
+    Order Confirmation\n
+    ${orderDetails}\n
+    Total Quantity: ${totalQty}\n
+    Total Price: $${totalPrice.toFixed(2)}\n
+    Shipping Information:\n
+    Name: ${shippingData.fname} ${shippingData.lname}\n
+    Address: ${shippingData.address}\n
+    Email: ${shippingData.email}
+  `;
+    const emailData = {
+      to_name: `${shippingData.fname} ${shippingData.lname}`,
+      from_name: "O LIVE Company ", // or your own name
+      message: emailMessage,
+      reply_to: shippingData.email,
+    };
+    emailjs
+      .send(
+        "service_2pyxu5v",
+        "template_gcwvb7l",
+        emailData,
+        "4uoXXQYPoXoQK1PCF"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          // Handle success (e.g., show a message to the user)
+        },
+        (err) => {
+          console.log("FAILED...", err);
+          // Handle errors (e.g., show an error message to the user)
+        }
+      );
   };
   return (
     <div className=" container  mx-auto px-8">
@@ -141,7 +184,6 @@ const Checkout = () => {
               />
             </div>
           </div>
-
           <div className="relative mb-6" data-te-input-wrapper-init>
             <input
               type="text"
@@ -184,6 +226,7 @@ const Checkout = () => {
         <div className=" text-center p-4">
           <IoIosCheckmarkCircleOutline className="text-center mb-2 text-6xl mx-auto text-green-600"></IoIosCheckmarkCircleOutline>
           <p> Order done successfully</p>
+          <p> Check Your Email </p>
         </div>
         <IoIosCloseCircle
           className=" absolute top-0 right-0 text-xl cursor-pointer"
