@@ -12,7 +12,7 @@ const Header = ({ shouldRender }) => {
     setCartOpen(!isCartOpen);
   };
   return (
-    <nav className=" flex flex-col shadow-md sticky top-0 left-0 z-50 bg-white  py-4 gap-7 justify-around items-center sm:flex-row">
+    <nav className=" flex flex-col shadow-md  bg-white  py-4 gap-7 justify-around items-center sm:flex-row">
       <Link to="/">
         <h2 className=" text-2xl font-bold uppercase sm:text-4xl flex  items-center gap-2">
           <svg
