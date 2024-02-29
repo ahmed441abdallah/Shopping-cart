@@ -48,7 +48,7 @@ const Checkout = () => {
   `;
     const emailData = {
       to_name: `${shippingData.fname} ${shippingData.lname}`,
-      from_name: "O LIVE Company ", // or your own name
+      from_name: "OLIVE Company ",
       message: emailMessage,
       reply_to: shippingData.email,
     };
