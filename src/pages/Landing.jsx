@@ -13,6 +13,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Questions from "../components/Questions";
 import Subscribe from "../components/Subscribe";
+import ScrollToTop from "../components/ScrollToTop ";
 
 const Landing = () => {
   useEffect(() => {
@@ -91,6 +92,7 @@ const Landing = () => {
       <Gallery></Gallery>
       <Subscribe></Subscribe>
       <Footer></Footer>
+      <ScrollToTop></ScrollToTop>
     </>
   );
 };
