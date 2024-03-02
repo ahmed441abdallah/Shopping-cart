@@ -1,5 +1,6 @@
 const { json } = require("body-parser");
 const express = require("express");
+require("dotenv").config();
 const mongoose = require("mongoose");
 const Product = require("./models/productModel");
 const User = require("./models/userModel");
@@ -7,13 +8,12 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const cors = require("cors");
-
 const app = express();
 app.use(json());
 app.use(cors());
 // routes
 app.get("/", (req, res) => {
-  res.send("hello node api");
+  res.send(" node api");
 });
 
 // operation
@@ -64,13 +64,14 @@ app.delete("/products/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
+const PORT = process.env.PORT;
 mongoose
   .connect(
     "mongodb+srv://ahmedabdaalh027:1234Aa@cluster0.orsxiyk.mongodb.net/?retryWrites=true&w=majority"
   )
   .then(() => {
     console.log("Connected to db!");
-    app.listen(3004, () => {
+    app.listen(PORT || 3004, () => {
       console.log("Api app is running on port 3004");
     });
   });

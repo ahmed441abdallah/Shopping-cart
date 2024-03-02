@@ -6,7 +6,11 @@ import Modal from "react-modal";
 import { Provider } from "react-redux";
 import { store } from "./Redux/store";
 import { BrowserRouter } from "react-router-dom";
+import { disableReactDevTools } from "@fvilers/disable-react-devtools";
 const root = ReactDOM.createRoot(document.getElementById("root"));
+if (process.env.NODE_ENV === "production") {
+  disableReactDevTools();
+}
 Modal.setAppElement("#root");
 
 root.render(

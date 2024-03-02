@@ -29,7 +29,7 @@ function ContactPage() {
 
   return (
     <div className="container mx-auto p-8">
-      <div className="flex flex-wrap -mx-4">
+      <div className="flex flex-wrap   items-center">
         <div className="w-full md:w-1/2 px-4 mb-4 md:mb-0">
           <h2 className="text-xl font-semibold mb-5"> Contact Us 📨 </h2>
           <form ref={form} onSubmit={sendEmail}>
