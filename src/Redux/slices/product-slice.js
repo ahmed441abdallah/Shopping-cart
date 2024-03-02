@@ -3,7 +3,7 @@ import axios from "axios";
 export const fetchProducts = createAsyncThunk(
   "productSlice/fetchProducts",
   async () => {
-    const response = await axios.get("http://localhost:3004/products");
+    const response = await axios.get("https://shopping-cart-olive-api.vercel.app/products");
     return response.data;
   }
 );
