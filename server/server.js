@@ -10,7 +10,15 @@ const jwt = require("jsonwebtoken");
 const cors = require("cors");
 const app = express();
 app.use(json());
-app.use(cors());
+const corsOptions = {
+  origin: ["https://shopping-cart.vercel.com"],
+  methods: ["GET", "POST", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 // routes
 app.get("/", (req, res) => {
   res.send(" node api");
