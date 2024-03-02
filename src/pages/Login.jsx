@@ -16,10 +16,13 @@ const Login = ({ setIsLogin }) => {
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://shopping-cart-olive-api.vercel.app/login", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "http://localhost:3004/products/login",
+        {
+          email,
+          password,
+        }
+      );
       const { token } = response.data;
       localStorage.setItem("token", token);
       setIsLogin(true); // Store the token in localStorage
