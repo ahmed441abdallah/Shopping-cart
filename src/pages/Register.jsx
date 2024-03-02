@@ -12,8 +12,9 @@ const Register = () => {
   const [error, setError] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
     try {
-      const response = await axios.post("http://localhost:3004/signup", {
+      const response = await axios.post("https://shopping-cart-olive-api.vercel.app/signup", {
         email,
         password,
       });
