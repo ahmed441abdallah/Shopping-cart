@@ -16,7 +16,7 @@ const Login = ({ setIsLogin }) => {
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3004/login", {
+      const response = await axios.post("https://o-live-api.vercel.app/login", {
         email,
         password,
       });
