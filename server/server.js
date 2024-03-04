@@ -11,7 +11,7 @@ const cors = require("cors");
 const app = express();
 app.use(json());
 const corsOptions = {
-  origin: ["https://shopping-cart.vercel.com", "http://localhost:3000"], // Allow both production and local origins
+  origin: ["https://olive-frontend-kappa.vercel.app/", "http://localhost:3000"], // Allow both production and local origins
   methods: ["GET", "POST", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
